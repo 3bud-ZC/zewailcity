@@ -18,20 +18,20 @@
 - **Updated grades per request:** ENGL 004 → P, SCH 261 → A-, SUST 225 → C
 - **Updated GPA:** 3.33 (Term & Overall)
 - **UI Polish:** Color-coded grades (A=green, B=blue, C=amber, F=red, P=green), smoother transitions, better shadows, improved card styling
+- **Added 2026/Summer Grade Report:** Added Summer 2026 term view with Period selector, Sequence 001, Attempted Credits: 4.00, Earned Credits: 2.00, Term GPA: 1.8334, Overall GPA: 1.7843, SCH 273 (C-), and SCH 277 (B). Dynamic switching between terms.
 
 ## What remains
 - Nothing — project is complete, pushed to GitHub, and ready for Vercel
 
 ## GitHub Repository
-https://github.com/3bdallhrgb-collab/university-portal.git
+https://github.com/3bud-ZC/zewailcity.git
 
-## Deploy on Vercel (Steps)
-1. Go to https://vercel.com and sign in with your GitHub account
-2. Click "Add New Project"
-3. Select the `university-portal` repository
-4. Vercel will auto-detect Next.js — leave settings as default
-5. Click "Deploy"
-6. Your site will be live at a `*.vercel.app` URL
+## Deploy on GitHub Pages (Steps)
+1. Go to https://github.com/3bud-ZC/zewailcity/settings/pages
+2. Under "Build and deployment" > "Source", select **GitHub Actions**
+3. The GitHub Actions workflow (`.github/workflows/deploy.yml`) will automatically build and deploy your site.
+4. Your site will be live at: `https://3bud-zc.github.io/zewailcity/`
+
 
 ## Files created/modified
 - package.json

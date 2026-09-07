@@ -5,36 +5,39 @@ import { DEMO_GRADE_REPORT } from "@/data/grades";
 import CourseDetailsModal from "./CourseDetailsModal";
 import type { CourseGrade } from "@/data/grades";
 
-export default function GradeTable() {
+interface GradeTableProps {
+  courses?: CourseGrade[];
+}
+
+export default function GradeTable({ courses = DEMO_GRADE_REPORT.courses }: GradeTableProps) {
   const [selectedCourse, setSelectedCourse] = useState<CourseGrade | null>(null);
-  const { courses } = DEMO_GRADE_REPORT;
 
   return (
     <div className="bg-white rounded shadow border border-gray-200 overflow-hidden">
-      <div className="px-4 sm:px-6 py-3 border-b border-gray-200 bg-gray-50">
-        <h3 className="text-sm font-semibold text-gray-800">Main</h3>
+      <div className="px-4 sm:px-6 pt-4 pb-2">
+        <h3 className="text-base font-semibold text-gray-800">Main</h3>
       </div>
 
       <div className="overflow-x-auto">
         <table className="min-w-full text-sm">
-          <thead className="bg-gray-50">
+          <thead className="border-b border-gray-200 bg-white">
             <tr>
-              <th className="text-left px-3 sm:px-6 py-3 text-xs font-medium text-gray-600 uppercase tracking-wider">
+              <th className="text-left px-3 sm:px-6 py-2.5 text-xs font-semibold text-gray-700">
                 Course
               </th>
-              <th className="text-right px-3 sm:px-6 py-3 text-xs font-medium text-gray-600 uppercase tracking-wider">
+              <th className="text-right px-3 sm:px-6 py-2.5 text-xs font-semibold text-gray-700">
                 Credits
               </th>
-              <th className="text-right px-3 sm:px-6 py-3 text-xs font-medium text-gray-600 uppercase tracking-wider hidden sm:table-cell">
+              <th className="text-right px-3 sm:px-6 py-2.5 text-xs font-semibold text-gray-700 hidden sm:table-cell">
                 Quality Points
               </th>
-              <th className="text-center px-3 sm:px-6 py-3 text-xs font-medium text-gray-600 uppercase tracking-wider hidden md:table-cell">
+              <th className="text-center px-3 sm:px-6 py-2.5 text-xs font-semibold text-gray-700 hidden md:table-cell">
                 Projected Grade
               </th>
-              <th className="text-center px-3 sm:px-6 py-3 text-xs font-medium text-gray-600 uppercase tracking-wider">
+              <th className="text-center px-3 sm:px-6 py-2.5 text-xs font-semibold text-gray-700">
                 Final Grade
               </th>
-              <th className="text-left px-3 sm:px-6 py-3 text-xs font-medium text-gray-600 uppercase tracking-wider">
+              <th className="text-left px-3 sm:px-6 py-2.5 text-xs font-semibold text-gray-700">
                 Action
               </th>
             </tr>
